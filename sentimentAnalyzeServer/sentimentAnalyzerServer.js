@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 
 app.get("/url/emotion", (req, res) => {
   const analyzeParams = {
-    text: req.query.url,
+    url: req.query.url,
     features: {
       entities: {
         emotion: true,
@@ -57,7 +57,7 @@ app.get("/url/emotion", (req, res) => {
 
 app.get("/url/sentiment", (req, res) => {
   const analyzeParams = {
-    text: req.query.url,
+    url: req.query.url,
     features: {
       entities: {
         sentiment: true,
